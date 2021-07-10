@@ -17,13 +17,13 @@ mkdir /home/user/data/postgres-db-app1
 
 Run docker with exposed default port 5432 and set pass for 'postgres' user.
 
-Map postgres folder data to volume:
+Map postgres folder data to folder:
 
 ```bash
 docker run -e POSTGRES_PASSWORD=pass_for_user_postgres -v /home/user/data/postgres-db-app1:/var/lib/postgresql/data -p 5432:5432 -d postgres:9.5
 ```
 
-Map postgres folder data to folder:
+Map postgres folder data to volume:
 
 ```bash
 docker run -e POSTGRES_PASSWORD=pass_for_user_postgres -v postgres-db-app1:/var/lib/postgresql/data -p 5432:5432 -d postgres:9.5
